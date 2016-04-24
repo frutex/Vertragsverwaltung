@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="DataBaseConnection">
+	<class name="com.jwt.hibernate.bean.MitarbeiterEO" table="MITARBEITER" catalog="MyTestDB">
+		<id name="m_id" type="int">
+		    <generator class="native"/>
+		</id>
+		<property name="m_name"></property>
+		<property name="m_vorname"></property>
+		<property name="m_telnr"></property>
+		<property name="m_adresse"></property>
+	</class>
+</hibernate-mapping>
