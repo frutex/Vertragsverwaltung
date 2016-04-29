@@ -14,12 +14,12 @@
 	<form action="register" method="post">
 		<table cellpadding="3pt">
 			<tr>
-				<td>User Name :</td>
+				<td>Name :</td>
 				<td><input type="text" name="name" size="30" /></td>
 			</tr>
 
 			<tr>
-				<td>User Vorname :</td>
+				<td>Vorname :</td>
 				<td><input type="text" name="vorname" size="30" /></td>
 			</tr>
 			<tr>

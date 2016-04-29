@@ -15,7 +15,7 @@ public class Success extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 
 		writer.println("<html>" + "<body bgcolor='cyan'>" + "<center>"
-				+ "Mitarbeiter erfolgreich hinzugefügt" + "</center>" + "</body>"
+				+ "Mitarbeiter erfolgreich hinzugefuegt" + "</center>" + "</body>"
 				+ "</html>");
 	}
 
