@@ -9,30 +9,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
-@Entity (name="MITARBEITER")
-@Table(name="MITARBEITER")
+@Entity(name = "MITARBEITER")
+@Table(name = "MITARBEITER")
 public class MitarbeiterEO implements Serializable {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name= "M_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "M_ID")
 	private int m_id;
-	
-	@Column(name="M_NAME")
+
+	@Column(name = "M_NAME")
 	private String m_name;
-	
-	@Column(name="M_VORNAME")
+
+	@Column(name = "M_VORNAME")
 	private String m_vorname;
-	
-	@Column(name="M_TELNR")
+
+	@Column(name = "M_TELNR")
 	private String m_telnr;
-	
-	@Column(name="M_ADRESSE")
+
+	@Column(name = "M_ADRESSE")
 	private String m_adresse;
-	
-	public MitarbeiterEO(String ma_name, String ma_vorname, String ma_telnr,
-			String ma_adresse) {
+
+	public MitarbeiterEO(String ma_name, String ma_vorname, String ma_telnr, String ma_adresse) {
 		super();
 		this.m_name = ma_name;
 		this.m_vorname = ma_vorname;
@@ -85,4 +82,15 @@ public class MitarbeiterEO implements Serializable {
 		this.m_adresse = m_adresse;
 	}
 
+	public String toJSON() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("{");
+		sb.append("ID:").append(this.m_id).append(",");
+		sb.append("Name:").append(this.m_name).append(",");
+		sb.append("Vorname:").append(this.m_vorname).append(",");
+		sb.append("Addresse:").append(this.m_adresse.replace(",", " ")).append(",");
+		sb.append("TelNr:").append(this.m_telnr).append(",");
+		sb.append("}");
+		return sb.toString();
+	}
 }

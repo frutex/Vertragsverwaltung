@@ -26,7 +26,7 @@ public class EasyCMAddMaCmd extends AbstractEasyCMCmdServlet implements EasyCMSe
 		try {
 			MitarbeiterDAO maDAO = new MitarbeiterDAO();
 			maDAO.storeMA(name, vorName, telnr, adresse);
-			response.sendRedirect("Success");
+			this.sendJsonResult("success");
 		} catch (Exception e) {
 
 			e.printStackTrace();
